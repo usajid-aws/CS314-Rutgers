@@ -38,7 +38,10 @@
       (cons (car lst) (cons (car lst) (echo-all (cdr lst) ) ) ) 
       (cons (echo (car lst)) (cons (echo (car lst)) (echo-all (cdr lst))) ) ) ))
 
-;;(echo-all '(a (b c))
+
+
+;;(echo-all '(a (b c)))
+
 
 ;;Q4
 
@@ -55,15 +58,15 @@
 ;; Q5  
 (define (assoc-all keys a-list)
   (map (lambda (k) (cadr (assoc k a-list)))
-       keys))
+       keys))  
 
-(assoc-all '(a d c d) '((a apple)(b boy)(c (cat cow))(d dog)))
 
+;;(assoc-all '(a d c d) '((a apple)(b boy)(c (cat cow))(d dog)))
 ;;Q6
 
 (define (filter-out-er fn) 
   (define helper (lambda(x) (if (null? x) '() 
-                         (if (not (fn (car x))) (cons (car x) (helper (cdr x)) ) 
-                           (helper (cdr x)) ) ) )) helper)
+                              (if (not (fn (car x))) (cons (car x) (helper (cdr x)) ) 
+                                (helper (cdr x)) ) ) )) helper)
 
 ;; (filter even? '(3 4 6 7 8))
