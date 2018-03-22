@@ -16,14 +16,14 @@
 ;; number 2
 ;;
 
-;;(define (tribonacci n)
+(define (tribonacci n)
 
-;;   (cond
-;;     ((zero? n) 0)
-;;     ((= n 1) 0)
-;;     ((= n 2) 0)
-;;     ((= n 3) 1)
-;;     (else (+ (tribonacci (- n 1) ) (+ (tribonacci (- n 2)) (tribonacci (- n 3) ))))))
+   (cond
+     ((zero? n) 0)
+     ((= n 1) 0)
+     ((= n 2) 0)
+     ((= n 3) 1)
+     (else (+ (tribonacci (- n 1) ) (+ (tribonacci (- n 2)) (tribonacci (- n 3) ))))))
 
 ;; == test == 
 ;;(tribonacci 9)
