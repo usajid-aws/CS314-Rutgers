@@ -1,3 +1,5 @@
+;; number 1
+
 (define-syntax 
   firstnon0
   (syntax-rules()
@@ -13,7 +15,7 @@
 ;;(firstnon0 (+ 1 1) (- 2 2) (- 1 1))
 ;;(firstnon0 (+ -1 1) (- 2 2) (+ 5 1))
 
-;; number 2
+;; number 2 recursive
 ;;
 
 ;;(define (tribonacci n)
@@ -29,7 +31,7 @@
 ;;(tribonacci 9)
 ;;(tribonacci 6)
 
-;; ====== tail recursive ======
+;; ====== tail recursive Number 2 ======
 
 (define (tribonacci n)
   (define (helper n a b c)
