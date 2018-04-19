@@ -18,7 +18,6 @@ def log2hist(logfilename):
     
     file = open(logfilename, 'r')
     users = {}
-    print_count = []
     count = 0
     for line in file:
     	if('user' not in line):
