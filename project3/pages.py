@@ -18,13 +18,13 @@ def log2hist(logfilename):
     
     file = open(logfilename, 'r')
     users = {}
-    count = 0
+  
     for line in file:
     	if('user' not in line):
     		continue
     	else:
     		#extract name from line
-    		count+=1
+    	
     		user_name = re.search(r'user:\s+(\w+)', line).group(1)
     		page_count = re.search(r'pages:\s+(\d+)', line).group(1)
     		#print("page_count: ",page_count)
@@ -33,14 +33,13 @@ def log2hist(logfilename):
     			
     		else:
     			users[user_name] = int(page_count)
-    			count +=1
             
     '''   
     for i in users.values():
     	print(i)
     '''
     data = open('data', 'w+')
-    print(count)
+    #print(count)
     #adds all the pagecounts from user dict
     for pageCount in users.values():
     	data.write('%d\n' % pageCount)
@@ -49,7 +48,7 @@ def log2hist(logfilename):
     data.close()
     file.close()
 
-    #runR()
+    runR()
 
     return
 
